@@ -14,8 +14,6 @@ final class WebPagePresenter{
     
     private var requests: URLRequest?
     private let url = URL(string: "")
-    private var tokenA: String?
-    private var newsArray: NewsAllData?
 }
 
 extension WebPagePresenter: WebPageViewOutput {
@@ -28,22 +26,33 @@ extension WebPagePresenter: WebPageViewOutput {
         
     }
     
+    /*
+     Передаю запрос на view
+     */
     func loadingRequestForWeb() -> URLRequest {
         guard let data = requests else { return URLRequest(url: url!) }
         return data 
     }
     
+    /*
+     Передаю полученные после авторизации в  iteractor
+     */
     func transitionData(_ data: String) {
         interactor?.dataSeparationsFromSignAndSave(data)
     }
     
+    /*
+      Передаем переход на view, с router
+     */
     func transition() {
         router?.startTransit()
     }
 }
 
 extension WebPagePresenter: WebPageInteractorOutput {
-
+    /*
+     Получаем  запрос и передаем на view
+     */
     func requestForLogin(_ request: URLRequest) {
         requests = request
     }

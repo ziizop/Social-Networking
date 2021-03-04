@@ -56,7 +56,7 @@ final class AuthManager {
             return
         }
         
-        print(" Добро пожаловать в клиент вк \n USER: \(userId) ")
+        print(" Добро пожаловать в клиент вк \n USER: \(userId)  \n  TOKEN: \n  \(userToken) ")
         mainWindow.rootViewController = tabBaarScreen
         
     }

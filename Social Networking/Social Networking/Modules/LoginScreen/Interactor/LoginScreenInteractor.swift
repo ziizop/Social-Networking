@@ -22,9 +22,7 @@ final class LoginScreenInteractor {
 
 extension LoginScreenInteractor: LoginScreenInteractorInput {
     func transinReguest() {
-        let api = NetworkongService.shared
-        
-        api.login { [ weak self ] result in
+        NetworkingService.shared.creatingUrlRequest { [ weak self ] result in
             guard let self = self else { return }
             switch result {
             case .success(let request):

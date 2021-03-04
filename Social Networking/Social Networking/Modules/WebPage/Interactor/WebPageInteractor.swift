@@ -22,10 +22,12 @@ final class WebPageInteractor {
 
 extension WebPageInteractor: WebPageInteractorInput {
     
+    /*
+     Создаем запрос и передаем его на presenter
+     */
     func transinReguest() {
-        let api = NetworkongService.shared
         
-        api.login { [ weak self ] result in
+        NetworkingService.shared.creatingUrlRequest{ [ weak self ] result in
             guard let self = self else { return }
             switch result {
             case .success(let request):
@@ -37,6 +39,9 @@ extension WebPageInteractor: WebPageInteractorInput {
         }
     }
     
+    /*
+     Принимаем с presenter данные и разделяем на token и userId
+     */
     func dataSeparationsFromSignAndSave(_ data: String) {
         let params = data
             .components(separatedBy: "&")

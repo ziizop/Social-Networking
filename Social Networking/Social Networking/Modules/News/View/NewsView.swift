@@ -13,7 +13,7 @@ protocol NewsViewOutput {
     func viewDidAppear()
     func numberOfSections() -> Int
     func numberOfRowsInSection() -> Int
-    func cellForRowAt(indexPath: Int) -> Response?
+    func cellForRowAt(indexPath: Int) -> NewsResponse?
 }
 
 protocol NewsViewInput: class {

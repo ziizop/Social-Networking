@@ -155,7 +155,7 @@ class NewsStorysTableViewCell: UITableViewCell {
         collectionView.reloadData()
     }
     
-    private func configureNews(data: Response?) {
+    private func configureNews(data: NewsResponse?) {
         
         newsView.addSubview(avataNews)
         newsView.addSubview(nameNews)
@@ -202,7 +202,7 @@ class NewsStorysTableViewCell: UITableViewCell {
             }
             
             print("Ссылка на картинку:  \(data?.url)")
-            NetworkongService.shared.loadImage(data?.url ?? "") { [ weak self ](result) in
+            NetworkingService.shared.uploadingImageByUrl(data?.url ?? "") { [ weak self ](result) in
                 guard let self = self else { return }
                 switch result {
                 case .success(let imageData):
@@ -215,7 +215,7 @@ class NewsStorysTableViewCell: UITableViewCell {
         }
     }
     
-    public func configure( data: Response? ) {
+    public func configure( data: NewsResponse? ) {
         configureNews(data: data)
     }
 }

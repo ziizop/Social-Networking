@@ -12,7 +12,7 @@ final class NewsPresenter {
     var interactor: NewsInteractorInput?
     var router: NewsRouterInput?
 
-    private var newsArry: [Response] = []
+    private var newsArry: [NewsResponse] = []
 }
 
 extension NewsPresenter: NewsViewOutput {
@@ -37,14 +37,14 @@ extension NewsPresenter: NewsViewOutput {
         newsArry.count
     }
     
-    func cellForRowAt(indexPath: Int) -> Response? {
+    func cellForRowAt(indexPath: Int) -> NewsResponse? {
         newsArry[indexPath]
     }
     
 }
 
 extension NewsPresenter: NewsInteractorOutput {
-    func newsDataJson(_ data: [Response]) {
+    func newsDataJson(_ data: [NewsResponse]) {
         newsArry = data
         print("NEWS DATA : \(newsArry)")
         view?.reloadData()
