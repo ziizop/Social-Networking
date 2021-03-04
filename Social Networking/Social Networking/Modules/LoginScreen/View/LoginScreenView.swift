@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import WebKit
 
 
 protocol LoginScreenViewOutput {
     func viewDidLoad()
-    func tapButton()
+    func transit()
 }
 
 protocol LoginScreenViewInput: class {
@@ -33,38 +34,6 @@ final class LoginScreenView: BaseViewController {
             contentView.backgroundColor = .white
         }
         return contentView
-    }()
-    
-    private lazy var usernameLable: UILabel = {
-        let lable = UILabel()
-        lable.font = .systemFont(ofSize: 20, weight: .light)
-        lable.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        lable.text = "Имя пользователя"
-        return lable
-    }()
-    
-    private lazy var passwordLable: UILabel = {
-        let lable = UILabel()
-        lable.font = .systemFont(ofSize: 20, weight: .light)
-        lable.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        lable.text = "Пароль"
-        return lable
-    }()
-    
-    private lazy var usernameTextFild: UITextField = {
-        let textFild = UITextField()
-        textFild.placeholder = "Введите логин"
-        textFild.borderStyle = .roundedRect
-        textFild.font = .systemFont(ofSize: .zero, weight: .black)
-        return textFild
-    }()
-    
-    private lazy var passwordTextFild: UITextField = {
-        let textFild = UITextField()
-        textFild.placeholder = "Введите логин"
-        textFild.borderStyle = .roundedRect
-        textFild.font = .systemFont(ofSize: .zero, weight: .black)
-        return textFild
     }()
     
     private lazy var loginButton: ButtonView = {
@@ -97,41 +66,12 @@ final class LoginScreenView: BaseViewController {
             make.bottom.equalToSuperview()
         }
         
-        contentView.addSubview(usernameLable)
-        contentView.addSubview(usernameTextFild)
-        contentView.addSubview(passwordLable)
-        contentView.addSubview(passwordTextFild)
         contentView.addSubview(loginButton)
         
-        usernameLable.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(70)
-        }
-        
-        usernameTextFild.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.trailing.equalToSuperview().inset(70)
-            make.top.equalTo(usernameLable.snp.bottom).offset(10)
-            make.height.equalTo(40)
-            make.width.equalToSuperview().inset(70)
-        }
-        
-        passwordLable.snp.makeConstraints { make in
-            make.top.equalTo(usernameTextFild.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(70)
-        }
-        
-        passwordTextFild.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(70)
-            make.top.equalTo(passwordLable.snp.bottom).offset(10)
-            make.height.equalTo(40)
-            make.width.equalToSuperview().inset(70)
-        }
-        
         loginButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextFild.snp.bottom).offset(40)
-            make.trailing.leading.equalToSuperview().inset(70)
+            make.centerX.centerY.equalToSuperview()
             make.height.equalTo(50)
-            make.width.equalTo(60)
+            make.width.equalToSuperview().inset(60)
 //            make.bottom.equalToSuperview()
         }
         
@@ -151,7 +91,7 @@ final class LoginScreenView: BaseViewController {
     }
     
     @objc private func login() {
-        presenter?.tapButton()
+        presenter?.transit()
     }
 }
 //MARK: - UIScrollViewDelegate

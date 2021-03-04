@@ -3,7 +3,6 @@ import UIKit
 final class TabBarAssembly {
     
     static func assembly() -> UIViewController {
-        
         var view = TabBarView()
         var presenter = TabBarPresenter()
         var interactor = TabBarInteractor()

@@ -12,6 +12,8 @@ final class TabBarView : UITabBarController {
     
     var presetner: TabBarViewOutput?
     
+    var token: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presetner?.viewDidLoad()
@@ -26,6 +28,7 @@ final class TabBarView : UITabBarController {
         } else {
             view.backgroundColor = .white
         }
+        self.navigationItem.hidesBackButton = true
     }
     
     private func setTabBar() {

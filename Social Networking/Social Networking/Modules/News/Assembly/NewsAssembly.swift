@@ -9,6 +9,7 @@ import UIKit
 
 final class NewsAssembly {
     static func assembly() -> UIViewController {
+        
         let view = NewsView()
         let interactor = NewsInteractor()
         let presenter = NewsPresenter()

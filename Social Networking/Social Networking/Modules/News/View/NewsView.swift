@@ -9,6 +9,11 @@ import UIKit
 
 protocol NewsViewOutput {
     func viewDidLoad()
+    func viewWillAppear()
+    func viewDidAppear()
+    func numberOfSections() -> Int
+    func numberOfRowsInSection() -> Int
+    func cellForRowAt(indexPath: Int) -> Response?
 }
 
 protocol NewsViewInput: class {
@@ -29,6 +34,8 @@ final class NewsView: BaseViewController {
         }
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 400.0
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.register(cellWithClass: NewsStorysTableViewCell.self)
         return tableView
     }()
@@ -37,7 +44,16 @@ final class NewsView: BaseViewController {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         configure()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.viewWillAppear()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.viewDidAppear()
     }
     
     private func configure() {
@@ -52,7 +68,6 @@ final class NewsView: BaseViewController {
 
 //MARK: - NewsViewInput
 extension NewsView: NewsViewInput {
-    
     func reloadData() {
         newsTableView.reloadData()
     }
@@ -70,52 +85,19 @@ extension NewsView: UITableViewDelegate {
 
 //MARK: - UITableViewDataSource
 extension NewsView: UITableViewDataSource {
+
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        3
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        case 2:
-            print("ЗАХОДИМ")
-            return 10
-        default:
-            return 0
-        }
+        return presenter?.numberOfRowsInSection() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsStorysTableViewCell.reuseIdentifier, for: indexPath) as?  NewsStorysTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsStorysTableViewCell.reuseIdentifier, for: indexPath) as?  NewsStorysTableViewCell,
+              let news = presenter?.cellForRowAt(indexPath: indexPath.row)
               else { return UITableViewCell() }
-        switch indexPath.section {
-        case 0:
-            cell.configurSearchBar()
-        case 1:
-            cell.configurStorys("Anastas", avatar: #imageLiteral(resourceName: "_8qBzaeKfV0 (1)"))
-        case 2:
-            cell.configureNews()
-        default:
-            break
-        }
+        cell.configure(data: news)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 80
-        case 1:
-            return 130
-        case 2:
-           return 600
-        default:
-            return 0 
-        }
     }
 }
 

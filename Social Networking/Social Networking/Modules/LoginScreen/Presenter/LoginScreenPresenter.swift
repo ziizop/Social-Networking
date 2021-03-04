@@ -11,20 +11,27 @@ final class LoginScreenPresenter {
     weak var view: LoginScreenViewInput?
     var interactor: LoginScreenInteractorInput?
     var router: LoginScreenRouterInput?
+    
+    private var requests: URLRequest?
+    private let url = URL(string: "")
 }
 
 extension LoginScreenPresenter: LoginScreenViewOutput {
 
     func viewDidLoad() {
-        
+        interactor?.transinReguest()
     }
     
-    func tapButton() {
+    func transit() {
         router?.loginTransition()
     }
-    
 }
 
 extension LoginScreenPresenter: LoginScreenInteractorOutput {
+    func trasit(_ request: URLRequest) {
+        print("Data: \(request)")
+        requests = request
+    }
+    
     
 }

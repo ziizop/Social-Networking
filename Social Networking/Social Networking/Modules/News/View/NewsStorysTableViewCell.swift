@@ -9,7 +9,7 @@ import UIKit
 
 class NewsStorysTableViewCell: UITableViewCell {
     
-//MARK: - SearchBar
+    //MARK: - SearchBar
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.searchBarStyle = .minimal
@@ -27,7 +27,7 @@ class NewsStorysTableViewCell: UITableViewCell {
         return imageView
     }()
     
-//MARK: - Collection
+    //MARK: - Collection
     private lazy var containerView: UIView = {
         let view = UIView()
         if #available(iOS 13.0, *) {
@@ -56,9 +56,9 @@ class NewsStorysTableViewCell: UITableViewCell {
         return collectionView
     }()
     
-//MARK: - News
+    //MARK: - News
     private lazy var newsView: UIView = {
-       let view = UIView()
+        let view = UIView()
         if #available(iOS 13.0, *) {
             view.backgroundColor = .systemBackground
         } else {
@@ -102,14 +102,13 @@ class NewsStorysTableViewCell: UITableViewCell {
     
     private lazy var newsImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = #imageLiteral(resourceName: "notifications (1)")
         return imageView
     }()
     
-    
+    private var newsImageSize = 0
     private var name: String?
     private var avataUsers: UIImage?
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -144,10 +143,10 @@ class NewsStorysTableViewCell: UITableViewCell {
     
     func configurStorys(_ names: String, avatar: UIImage) {
         contentView.addSubview(collectionView)
-    
+        
         collectionView.snp.makeConstraints { make in
             make.leading.top.trailing.bottom.equalToSuperview().inset(10)
-//            make.height.width.equalTo(60)
+            //            make.height.width.equalTo(60)
         }
         
         avataUsers = avatar
@@ -156,14 +155,14 @@ class NewsStorysTableViewCell: UITableViewCell {
         collectionView.reloadData()
     }
     
-    func configureNews() {
+    private func configureNews(data: Response?) {
         
         newsView.addSubview(avataNews)
         newsView.addSubview(nameNews)
         newsView.addSubview(publicationTime)
         newsView.addSubview(textNews)
-        newsView.addSubview(newsImage
-        )
+        newsView.addSubview(newsImage)
+        
         contentView.addSubview(newsView)
         newsView.snp.makeConstraints { make in
             make.width.height.equalToSuperview()
@@ -191,13 +190,33 @@ class NewsStorysTableViewCell: UITableViewCell {
             make.width.equalToSuperview().inset(30)
         }
         
-        newsImage.snp.makeConstraints { make in
-            make.top.equalTo(textNews.snp.bottom).offset(10)
-            make.centerX.equalToSuperview()
-            make.width.bottom.equalToSuperview().inset(30)
+        textNews.text = data?.text
+        
+        if data?.url != nil {
+            
+            newsImage.snp.makeConstraints { make in
+                make.top.equalTo(textNews.snp.bottom).offset(10)
+                make.trailing.leading.equalToSuperview().inset(30)
+                make.height.equalTo(400)
+                make.bottom.equalToSuperview().inset(10)
+            }
+            
+            print("Ссылка на картинку:  \(data?.url)")
+            NetworkongService.shared.loadImage(data?.url ?? "") { [ weak self ](result) in
+                guard let self = self else { return }
+                switch result {
+                case .success(let imageData):
+                    
+                    self.newsImage.image = imageData
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
         }
-        
-        
+    }
+    
+    public func configure( data: Response? ) {
+        configureNews(data: data)
     }
 }
 
