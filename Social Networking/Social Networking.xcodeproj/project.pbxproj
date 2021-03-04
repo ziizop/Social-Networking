@@ -63,6 +63,7 @@
 		AA9FD5DB25F11771003D606F /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9FD5DA25F11771003D606F /* libSDWebImage.a */; };
 		AA9FD5FA25F1883C003D606F /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD5F925F1883C003D606F /* FriendsModel.swift */; };
 		AA9FD5FD25F18B59003D606F /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD5FC25F18B59003D606F /* NetworkingService.swift */; };
+		AA9FD60525F1A2AB003D606F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD60425F1A2AB003D606F /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		AA9FD5DA25F11771003D606F /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9FD5F925F1883C003D606F /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		AA9FD5FC25F18B59003D606F /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		AA9FD60425F1A2AB003D606F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,6 +537,7 @@
 		AA1C11B325EC3BF40024E87A /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				AA9FD60425F1A2AB003D606F /* UserProfile.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				AA1C11E525ED48B90024E87A /* WebPageRouter.swift in Sources */,
 				AA9FD5FA25F1883C003D606F /* FriendsModel.swift in Sources */,
 				AA1C10C025E99D5E0024E87A /* AppDelegate.swift in Sources */,
+				AA9FD60525F1A2AB003D606F /* UserProfile.swift in Sources */,
 				AA1C11C025EC3EEE0024E87A /* ProfileTableViewCell.swift in Sources */,
 				AA1C118D25EAFC1E0024E87A /* UICollectionViewCell+Extension.swift in Sources */,
 				AA1C114F25E9BFC20024E87A /* ProfileView.swift in Sources */,

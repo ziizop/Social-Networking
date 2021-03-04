@@ -34,7 +34,6 @@ final class AuthManager {
     /*
      Сохранения данных с помощью UserDefaults
      */
-    
     func sevaDataUsersSing(_ userData: PrimaryUserData) {
         print("Сохранения данных пользователя: \n \(userData)")
         userToken = userData.token
@@ -45,7 +44,6 @@ final class AuthManager {
     /*
      Проверка на наличия токена и  выбор экрана
      */
-    
     func controlAuthorizationTokenAndSelectScreen(_ window: UIWindow?) {
         guard let mainWindow = window else { return }
         let loginScreenAuthorization = LoginScreenAssembly.assembly()
