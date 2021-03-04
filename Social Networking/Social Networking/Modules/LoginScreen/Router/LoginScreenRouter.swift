@@ -17,8 +17,8 @@ final class LoginScreenRouter {
 
 extension LoginScreenRouter: LoginScreenRouterInput {
     func loginTransition() {
-        let tabBar = TabBarAssembly.assembly()
-        view?.navigationController?.pushViewController(tabBar, animated: true)
+        let web = WebPageAssembly.assembly()
+        view?.navigationController?.pushViewController(web, animated: true)
         
     }
 }

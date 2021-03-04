@@ -20,10 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func startApp() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let loginScreen = LoginScreenAssembly.assembly()
-        let tabBar = TabBarAssembly.assembly()
-        
-        window?.rootViewController = loginScreen
+        AuthManager.shared.controlAuthorizationTokenAndSelectScreen(window)
         window?.makeKeyAndVisible()
     }
 }

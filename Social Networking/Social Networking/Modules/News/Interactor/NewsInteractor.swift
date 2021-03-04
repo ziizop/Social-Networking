@@ -8,11 +8,11 @@
 import Foundation
 
 protocol NewsInteractorOutput: class {
-    
+    func newsDataJson(_ data: [Response])
 }
 
 protocol NewsInteractorInput {
-    
+    func factoryNews()
 }
 
 final class NewsInteractor {
@@ -20,5 +20,16 @@ final class NewsInteractor {
 }
 
 extension NewsInteractor: NewsInteractorInput {
-    
+    func factoryNews() {
+        NetworkongService.shared.postRequest { [ weak self ] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let data):
+                print(data.count)
+                self.presenter?.newsDataJson(data)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
