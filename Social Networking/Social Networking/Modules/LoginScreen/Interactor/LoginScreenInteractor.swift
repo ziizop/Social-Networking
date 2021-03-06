@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LoginScreenInteractorOutput: class {
-    func trasit(_ request: URLRequest)
+    
 }
 
 protocol LoginScreenInteractorInput {
@@ -21,16 +21,8 @@ final class LoginScreenInteractor {
 }
 
 extension LoginScreenInteractor: LoginScreenInteractorInput {
+    
     func transinReguest() {
-        NetworkingService.shared.creatingUrlRequest { [ weak self ] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let request):
-                self.presenter?.trasit(request)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+
     }
-      
 }

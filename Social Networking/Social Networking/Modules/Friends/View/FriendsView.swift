@@ -9,10 +9,17 @@ import UIKit
 
 protocol FriendsViewOutput {
     func viewDidLoad()
+    func viewWillAppear()
+    func viewDidAppear()
+    func numberOfSections() -> Int
+    func numberOfRowsInSectionAllFriends(section: FriendsType) -> Int
+    func cellForRowAtFriends(_ section: FriendsType,_ indextRow: Int) -> FriendsModel?
+    func titleForHeaderInSection(_ section: FriendsType) -> String?
+    func heightForRowAt(_ section: FriendsType) -> CGFloat
 }
 
 protocol  FriendsViewInput: class {
-    
+    func reloadData()
 }
 
 final class FriendsView: BaseViewController {
@@ -34,8 +41,19 @@ final class FriendsView: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.viewDidLoad()
         configur()
+        presenter?.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.viewWillAppear()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.viewDidAppear()
     }
     
     private func  configur() {
@@ -49,7 +67,9 @@ final class FriendsView: BaseViewController {
 
 //MARK: - FriendsViewInput
 extension FriendsView: FriendsViewInput {
-    
+    func reloadData() {
+        tableView.reloadData()
+    }
 }
 
 //MARK: - UITableViewDelegate
@@ -59,64 +79,37 @@ extension FriendsView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 1:
-            return "Важные друзья"
-        case 2:
-            return "Мои друзья"
-        default:
-            return ""
-        }
-    }
 }
 
 //MARK: - UITableViewDataSource
 extension FriendsView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        FriendsType.allCases.count
     }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 5
-        case 2:
-            return 10
-        default:
-            return 0
-        }
+        guard let mainSection = FriendsType(rawValue: section) else { return 0 }
+        return presenter?.numberOfRowsInSectionAllFriends(section: mainSection) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendsTableViewCell.reuseIdentifier , for: indexPath) as? FriendsTableViewCell else { return  UITableViewCell() }
-        switch indexPath.section {
-        case 0:
-            cell.configureSearchBar() 
-        case 1:
-            cell.configureFriends()
-        case 2:
-            cell.configureFriends()
-        default:
-            break
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendsTableViewCell.reuseIdentifier , for: indexPath) as? FriendsTableViewCell,
+              let section = FriendsType(rawValue: indexPath.section),
+              let friends = presenter?.cellForRowAtFriends(section, indexPath.row)
+              else { return  UITableViewCell() }
+        
+        cell.configureFriends(friends)
         return cell
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let section = FriendsType(rawValue: section) else { return "" }
+        return presenter?.titleForHeaderInSection(section)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 60
-        case 1:
-            return 80
-        case 2:
-            return 80
-        default:
-            return 0
-        
-        }
+        guard let section = FriendsType(rawValue: indexPath.section) else { return 80}
+        return presenter?.heightForRowAt(section) ?? 0
     }
 }

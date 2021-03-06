@@ -6,6 +6,6 @@ target 'Social Networking' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'ObjectMapper', '~> 4.2'
-  pod 'SDWebImage', '~> 5.0'
+  pod 'SDWebImage'
 
 end

@@ -26,7 +26,6 @@ extension WebPageInteractor: WebPageInteractorInput {
      Создаем запрос и передаем его на presenter
      */
     func transinReguest() {
-        
         NetworkingService.shared.creatingUrlRequest{ [ weak self ] result in
             guard let self = self else { return }
             switch result {

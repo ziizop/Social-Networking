@@ -11,6 +11,7 @@ class FriendsModel: Codable {
     let firstName: String
     let id: Int
     let lastName: String
+    let title: String
     let canAccessClosed, isClosed: Bool?
     let online: Int
     let photo200_Orig: String
@@ -25,6 +26,9 @@ class FriendsModel: Codable {
         
         let lastName = json["last_name"].stringValue
         self.lastName = lastName
+        
+        let title = json["city"]["title"].stringValue
+        self.title = title
         
         let canAccessClosed = json["can_access_closed"].boolValue
         self.canAccessClosed = canAccessClosed

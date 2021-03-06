@@ -131,7 +131,7 @@ final class NetworkingService {
      */
     private var methodFriends = "/method/friends.get"
     private var order = "hints"
-    private var fields =  "nickname, online,last_seen,photo_200_orig"
+    private var fields =  "nickname, online,last_seen,photo_200_orig,city"
     
     /*
      Метод отправки запрос на сервер для получения друзей
@@ -194,5 +194,18 @@ final class NetworkingService {
             }
         }
     }
+    
+    //MARK: - Network for group  info data
+    /*
+     Свойства для связи с сервиром:
+     Этот метод можно вызвать с ключом доступа пользователя
+     access_token - ключом доступа пользователя
+     Остальные параметры: https://vk.com/dev/account.getProfileInfo
+     */
+    private var methodGroup = "/method/account.getProfileInfo"
+    
+    /*
+     Метод отправки запрос на сервер для получения друзей
+     */
     
 }

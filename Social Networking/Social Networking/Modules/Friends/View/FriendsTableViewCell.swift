@@ -27,6 +27,11 @@ class FriendsTableViewCell: UITableViewCell {
         return view
     }()
     
+    private lazy var onlineImage: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
+    
     private lazy var avatarImage: UIImageView = {
        let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "_8qBzaeKfV0 (1)")
@@ -65,10 +70,17 @@ class FriendsTableViewCell: UITableViewCell {
         
     }
     
-    func configureFriends() {
+    func configureFriends(_ data: FriendsModel) {
         contentView.addSubview(avatarImage)
+        contentView.addSubview(onlineImage)
         contentView.addSubview(nameLabel)
         contentView.addSubview(cityLabel)
+        
+        onlineImage.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(65)
+            make.top.bottom.equalToSuperview().inset(50)
+            make.width.height.equalTo(25)
+        }
         
         avatarImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(30)
@@ -86,6 +98,23 @@ class FriendsTableViewCell: UITableViewCell {
             make.leading.equalTo(avatarImage.snp.trailing).offset(10)
             make.bottom.equalToSuperview().inset(15)
         }
+        
+        nameLabel.text = data.firstName
+        cityLabel.text = data.title
+        
+        if data.online == 1 {
+            onlineImage.image = #imageLiteral(resourceName: "iconfinder_clone-old_15483")
+        }
+        
+        NetworkingService.shared.uploadingImageByUrl(data.photo200_Orig) { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .success(let image):
+                self.avatarImage.image = image
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func configureSearchBar() {
@@ -100,6 +129,8 @@ class FriendsTableViewCell: UITableViewCell {
             make.centerX.centerY.equalToSuperview()
             make.width.equalToSuperview()
         }
+        
+        
     }
 }
 

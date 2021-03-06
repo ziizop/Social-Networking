@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2257A91AD727C67C5D691677 /* libPods-Social Networking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA7BB1B3D2A17A04E3E10D3 /* libPods-Social Networking.a */; };
+		3882F32940AB8F8296D42BCE /* libPods-Social Networking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CDC979291E169675CA0037 /* libPods-Social Networking.a */; };
 		AA1C10C025E99D5E0024E87A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C10BF25E99D5E0024E87A /* AppDelegate.swift */; };
 		AA1C10C925E99D610024E87A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1C10C825E99D610024E87A /* Assets.xcassets */; };
 		AA1C10CC25E99D610024E87A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1C10CA25E99D610024E87A /* LaunchScreen.storyboard */; };
@@ -64,12 +64,14 @@
 		AA9FD5FA25F1883C003D606F /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD5F925F1883C003D606F /* FriendsModel.swift */; };
 		AA9FD5FD25F18B59003D606F /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD5FC25F18B59003D606F /* NetworkingService.swift */; };
 		AA9FD60525F1A2AB003D606F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD60425F1A2AB003D606F /* UserProfile.swift */; };
+		AA9FD61325F399EB003D606F /* FriendsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD61225F399EB003D606F /* FriendsType.swift */; };
+		AA9FD61C25F3A075003D606F /* FriendsSortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD61B25F3A075003D606F /* FriendsSortType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		41BAE2D91DD819464F520FB8 /* Pods-Social Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking.release.xcconfig"; path = "Target Support Files/Pods-Social Networking/Pods-Social Networking.release.xcconfig"; sourceTree = "<group>"; };
-		4FA7BB1B3D2A17A04E3E10D3 /* libPods-Social Networking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Social Networking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		535DC5EA9A728F848F96C07F /* Pods-Social Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking.debug.xcconfig"; path = "Target Support Files/Pods-Social Networking/Pods-Social Networking.debug.xcconfig"; sourceTree = "<group>"; };
+		358371BC70CFC61B2ABFF085 /* Pods-Social Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking.release.xcconfig"; path = "Target Support Files/Pods-Social Networking/Pods-Social Networking.release.xcconfig"; sourceTree = "<group>"; };
+		45BA5A50C845530D4F4A32C7 /* Pods-Social Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking.debug.xcconfig"; path = "Target Support Files/Pods-Social Networking/Pods-Social Networking.debug.xcconfig"; sourceTree = "<group>"; };
+		A2CDC979291E169675CA0037 /* libPods-Social Networking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Social Networking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C10BC25E99D5E0024E87A /* Social Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Networking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C10BF25E99D5E0024E87A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1C10C825E99D610024E87A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,8 @@
 		AA9FD5F925F1883C003D606F /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		AA9FD5FC25F18B59003D606F /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		AA9FD60425F1A2AB003D606F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		AA9FD61225F399EB003D606F /* FriendsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsType.swift; sourceTree = "<group>"; };
+		AA9FD61B25F3A075003D606F /* FriendsSortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSortType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +141,7 @@
 			files = (
 				AA1C11F125ED8B8D0024E87A /* WebKit.framework in Frameworks */,
 				AA9FD5DB25F11771003D606F /* libSDWebImage.a in Frameworks */,
-				2257A91AD727C67C5D691677 /* libPods-Social Networking.a in Frameworks */,
+				3882F32940AB8F8296D42BCE /* libPods-Social Networking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +151,8 @@
 		330195635C03EB83C890E37F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				535DC5EA9A728F848F96C07F /* Pods-Social Networking.debug.xcconfig */,
-				41BAE2D91DD819464F520FB8 /* Pods-Social Networking.release.xcconfig */,
+				45BA5A50C845530D4F4A32C7 /* Pods-Social Networking.debug.xcconfig */,
+				358371BC70CFC61B2ABFF085 /* Pods-Social Networking.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,7 +162,7 @@
 			children = (
 				AA9FD5DA25F11771003D606F /* libSDWebImage.a */,
 				AA1C11F025ED8B8D0024E87A /* WebKit.framework */,
-				4FA7BB1B3D2A17A04E3E10D3 /* libPods-Social Networking.a */,
+				A2CDC979291E169675CA0037 /* libPods-Social Networking.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -497,7 +501,9 @@
 		AA1C11A125EBF0A80024E87A /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				AA9FD61B25F3A075003D606F /* FriendsSortType.swift */,
 				AA9FD5F925F1883C003D606F /* FriendsModel.swift */,
+				AA9FD61225F399EB003D606F /* FriendsType.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -618,7 +624,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA1C10D025E99D610024E87A /* Build configuration list for PBXNativeTarget "Social Networking" */;
 			buildPhases = (
-				B5A995163DCE075573E190FE /* [CP] Check Pods Manifest.lock */,
+				05E8E2FAD12F16DBDE742BA9 /* [CP] Check Pods Manifest.lock */,
 				AA1C10B825E99D5E0024E87A /* Sources */,
 				AA1C10B925E99D5E0024E87A /* Frameworks */,
 				AA1C10BA25E99D5E0024E87A /* Resources */,
@@ -677,7 +683,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B5A995163DCE075573E190FE /* [CP] Check Pods Manifest.lock */ = {
+		05E8E2FAD12F16DBDE742BA9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -713,6 +719,7 @@
 				AA1C11AF25EBFDAB0024E87A /* FriendsTableViewCell.swift in Sources */,
 				AA1C114125E9BF000024E87A /* FriendsAssembly.swift in Sources */,
 				AA1C113125E9BAA30024E87A /* NewsView.swift in Sources */,
+				AA9FD61C25F3A075003D606F /* FriendsSortType.swift in Sources */,
 				AA1C118925EAFBEE0024E87A /* UICollectionView+Extension.swift in Sources */,
 				AA1C111925E9B7740024E87A /* TabBarView.swift in Sources */,
 				AA1C11E525ED48B90024E87A /* WebPageRouter.swift in Sources */,
@@ -739,6 +746,7 @@
 				AA1C11BA25EC3D500024E87A /* ProfileRouter.swift in Sources */,
 				AA1C111525E9B7540024E87A /* TabBarAssembly.swift in Sources */,
 				AA1C11C625ED0CF30024E87A /* ProfilePhotosCollectionViewCell.swift in Sources */,
+				AA9FD61325F399EB003D606F /* FriendsType.swift in Sources */,
 				AA1C112325E9B90E0024E87A /* TabBarRouter.swift in Sources */,
 				AA1C112D25E9BA400024E87A /* NewsAssembly.swift in Sources */,
 				AA1C114B25E9BF940024E87A /* ProfileAssembly.swift in Sources */,
@@ -893,7 +901,7 @@
 		};
 		AA1C10D125E99D610024E87A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 535DC5EA9A728F848F96C07F /* Pods-Social Networking.debug.xcconfig */;
+			baseConfigurationReference = 45BA5A50C845530D4F4A32C7 /* Pods-Social Networking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -913,7 +921,7 @@
 		};
 		AA1C10D225E99D610024E87A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41BAE2D91DD819464F520FB8 /* Pods-Social Networking.release.xcconfig */;
+			baseConfigurationReference = 358371BC70CFC61B2ABFF085 /* Pods-Social Networking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

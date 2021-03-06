@@ -18,7 +18,7 @@ final class NewsPresenter {
 extension NewsPresenter: NewsViewOutput {
   
     func viewDidLoad() {
-        interactor?.factoryNews()
+        
     }
     
     func viewWillAppear() {
@@ -26,7 +26,10 @@ extension NewsPresenter: NewsViewOutput {
     }
     
     func viewDidAppear() {
-        
+        /*
+         Сбор данных с сервера
+         */
+        interactor?.factoryNews()
     }
     
     func numberOfSections() -> Int {
@@ -44,6 +47,9 @@ extension NewsPresenter: NewsViewOutput {
 }
 
 extension NewsPresenter: NewsInteractorOutput {
+    /*
+     Передача данных собранных с сервера
+     */
     func newsDataJson(_ data: [NewsResponse]) {
         newsArry = data
         print("NEWS DATA : \(newsArry)")
