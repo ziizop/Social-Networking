@@ -24,6 +24,7 @@ final class FriendsAssembly {
         
         router.view = view
         
-        return view
+        let navC = UINavigationController(rootViewController: view)
+        return navC
     }
 }

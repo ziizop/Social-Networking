@@ -13,6 +13,9 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
+import WebKit
+
 
 final class NetworkingService {
     
@@ -59,8 +62,7 @@ final class NetworkingService {
      токин user сохраненный в UserDefaults
      user id
      */
-    private var userToken = AuthManager.shared.userToken
-    private var userId = AuthManager.shared.userId
+    
     private var baseUrl = "https://api.vk.com"
     
     /*
@@ -100,7 +102,7 @@ final class NetworkingService {
         let path = methodNewsFeed
         
         let params: Parameters = [
-            "access_token": userToken,
+            "access_token": AuthManager.shared.userToken,
             "filters": filters,
             "source_ids": sourceIds,
             "start_time": startTime,
@@ -140,8 +142,8 @@ final class NetworkingService {
         let baseURL = baseUrl
         let path = methodFriends
         let params: Parameters = [
-            "access_token": userToken,
-            "user_id": userId,
+            "access_token": AuthManager.shared.userToken,
+            "user_id": AuthManager.shared.userId,
             "order": order,
             "fields": fields,
             "v": vAPI
@@ -166,18 +168,24 @@ final class NetworkingService {
      Свойства для связи с сервиром:
      Этот метод можно вызвать с ключом доступа пользователя
      access_token - ключом доступа пользователя
-     Остальные параметры: https://vk.com/dev/account.getProfileInfo
+     user_ids - перечисленные через запятую идентификаторы пользователей или их короткие имена (screen_name)
+     fields - список дополнительных полей профилей, которые необходимо вернуть.
+     Остальные параметры: https://vk.com/dev/users.get
+     Значения возвращаемых параметров - https://vk.com/dev/objects/user
      */
-    private var methodUserProfileInfo = "/method/account.getProfileInfo"
+    private var methodUserProfileInfo = "/method/users.get"
+    private var userFields = " photo_id, verified, sex, bdate, city, country, home_town, has_photo, photo_50, photo_100, photo_200_orig, photo_200, photo_400_orig, photo_max, photo_max_orig, online, domain, has_mobile, contacts, site, education, universities, schools, status, last_seen, followers_count, common_count, occupation, nickname, relatives, relation, personal, connections, exports, activities, interests, music, movies, tv, books, games, about, quotes, can_post, can_see_all_posts, can_see_audio, can_write_private_message, can_send_friend_request, is_favorite, is_hidden_from_feed, timezone, screen_name, maiden_name, crop_photo, is_friend, friend_status, career, military, blacklisted, blacklisted_by_me, can_be_invited_group "
     
     /*
-     Метод отправки запрос на сервер для получения друзей
+     Метод отправки запрос на сервер для получения данных юзера
      */
-    func userProfil(completion: @escaping (Result<[UserProfile],Error>) -> Void ) {
+    func userProfil(_ userId: Int, completion: @escaping (Result<[UserProfile],Error>) -> Void ) {
         let baseURL = baseUrl
         let path = methodUserProfileInfo
         let params: Parameters = [
-            "access_token": userToken,
+            "access_token": AuthManager.shared.userToken,
+            "user_ids":userId ,
+            "fields": userFields,
             "v": vAPI
         ]
         
@@ -195,6 +203,8 @@ final class NetworkingService {
         }
     }
     
+    //
+    
     //MARK: - Network for group  info data
     /*
      Свойства для связи с сервиром:
@@ -207,5 +217,4 @@ final class NetworkingService {
     /*
      Метод отправки запрос на сервер для получения друзей
      */
-    
 }

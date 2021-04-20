@@ -58,7 +58,7 @@ extension WebPageInteractor: WebPageInteractorInput {
               let userIdString = params["user_id"],
               let id = Int(userIdString) else { return }
         
-        let userData = PrimaryUserData(token: token, userId: userIdString)
+        let userData = PrimaryUserData(token: token, userId: id)
         AuthManager.shared.sevaDataUsersSing(userData)
     }
 }

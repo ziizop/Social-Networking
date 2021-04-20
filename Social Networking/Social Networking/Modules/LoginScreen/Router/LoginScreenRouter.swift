@@ -18,7 +18,7 @@ final class LoginScreenRouter {
 extension LoginScreenRouter: LoginScreenRouterInput {
     func loginTransition() {
         let web = WebPageAssembly.assembly()
+        web.modalPresentationStyle = .fullScreen
         view?.navigationController?.pushViewController(web, animated: true)
-        
     }
 }

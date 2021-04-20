@@ -21,14 +21,18 @@ final class NewsInteractor {
 
 extension NewsInteractor: NewsInteractorInput {
     func factoryNews() {
-        NetworkingService.shared.newsRequest { [ weak self ] (result) in
-            guard let self = self else { return }
-            switch result {
-            case .success(let data):
-                print(data.count)
-                self.presenter?.newsDataJson(data)
-            case .failure(let error):
-                print(error.localizedDescription)
+        DispatchQueue.global(qos: .background).async {
+            NetworkingService.shared.newsRequest { [ weak self ] (result) in
+                guard let self = self else { return }
+                switch result {
+                case .success(let data):
+                    print(data.count)
+                    DispatchQueue.main.async {
+                        self.presenter?.newsDataJson(data)
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
     }

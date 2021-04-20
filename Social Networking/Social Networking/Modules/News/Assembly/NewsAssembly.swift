@@ -25,6 +25,7 @@ final class NewsAssembly {
         
         router.view = view
         
-        return view
+        let navC = UINavigationController(rootViewController: view)
+        return navC
     }
 }

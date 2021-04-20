@@ -41,9 +41,8 @@ final class FriendsView: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configur()
         presenter?.viewDidLoad()
-        
+        configur()
     }
     
     override func viewWillAppear(_ animated: Bool) {

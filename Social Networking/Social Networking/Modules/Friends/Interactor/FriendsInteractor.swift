@@ -28,6 +28,7 @@ final class FriendsInteractor {
 }
 
 extension FriendsInteractor: FriendsInteractorInput {
+    
     /*
      Загружаем данные
      */

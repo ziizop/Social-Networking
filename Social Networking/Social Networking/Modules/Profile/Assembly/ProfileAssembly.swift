@@ -23,6 +23,8 @@ final class ProfileAssembly {
         interactor.presenter = presenter
         
         router.view = view
-        return view 
+        
+        let navC = UINavigationController(rootViewController: view)
+        return navC
     }
 }

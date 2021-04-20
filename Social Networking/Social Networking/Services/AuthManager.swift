@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 final class AuthManager {
     
@@ -21,13 +22,13 @@ final class AuthManager {
         }
     }
     
-    public var userId: String {
+    public var userId: Int {
         get {
-            return UserDefaults.standard.string(forKey: "user_id") ?? ""
+            return UserDefaults.standard.integer(forKey: "user_id")
         }
         set {
             print("Новые userID: \n \(newValue) ")
-            UserDefaults.standard.setValue(newValue, forKey: "user_id")
+            UserDefaults.standard.set(newValue, forKey: "user_id")
         }
     }
     
@@ -57,5 +58,33 @@ final class AuthManager {
         print(" Добро пожаловать в клиент вк \n USER: \(userId)  \n  TOKEN: \n  \(userToken) ")
         mainWindow.rootViewController = tabBaarScreen
         
+    }
+  
+    //MARK: - Network remove cookie webkit
+    /*
+     Обнуляем токин и id
+     */
+    private func removeUserData() {
+        userToken = ""
+        userId = 0
+        print("Токен пользователя удален: \(userToken)  \n Id пользователя удален: \(userId)")
+    }
+  
+    /*
+     Обнуляем куки  webkit для выхода из аккаунта
+     */
+    
+    func removeCookie() {
+        URLCache.shared.removeAllCachedResponses()
+            HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
+            print("[WebCacheCleaner] All cookies deleted")
+
+            WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
+                records.forEach { record in
+                    WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
+                        print("[WebCacheCleaner] Record \(record) deleted")
+            }
+                self.removeUserData()
+        }
     }
 }

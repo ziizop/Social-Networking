@@ -22,10 +22,14 @@ extension NewsPresenter: NewsViewOutput {
     }
     
     func viewWillAppear() {
-        
+
     }
     
     func viewDidAppear() {
+
+    }
+    
+    func viewDidLayoutSubviews() {
         /*
          Сбор данных с сервера
          */

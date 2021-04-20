@@ -18,6 +18,7 @@ final class WebPageRouter {
 extension WebPageRouter: WebPageRouterInput {
     func startTransit() {
         let tabBarAssembly = TabBarAssembly.assembly()
-        view?.navigationController?.pushViewController(tabBarAssembly, animated: true)
+        tabBarAssembly.modalPresentationStyle = .fullScreen
+        view?.navigationController?.present(tabBarAssembly, animated: true)
     }
 }

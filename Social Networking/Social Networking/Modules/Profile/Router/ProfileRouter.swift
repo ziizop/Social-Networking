@@ -8,7 +8,8 @@
 import Foundation
 
 protocol ProfileRouterInput: class {
-    
+    func transitInLogin()
+    func showModalPage(_ data: UserProfile)
 }
 
 final class ProfileRouter {
@@ -17,5 +18,16 @@ final class ProfileRouter {
 
 //MARK: - ProfileRouterInput
 extension ProfileRouter: ProfileRouterInput {
+    func transitInLogin() {
+        let loginVC = LoginScreenAssembly.assembly()
+        loginVC.modalPresentationStyle = .fullScreen
+        view?.navigationController?.present(loginVC, animated: true, completion: {
+            AuthManager.shared.removeCookie()
+        })
+    }
     
+    func showModalPage(_ data: UserProfile) {
+        let modalVC = FullInfoPageUserAssembly.assembly(data)
+        view?.navigationController?.present(modalVC, animated: true)
+    }
 }

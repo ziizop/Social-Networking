@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3882F32940AB8F8296D42BCE /* libPods-Social Networking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CDC979291E169675CA0037 /* libPods-Social Networking.a */; };
+		6C8C8430DF810495BF75D5CD /* Pods_Social_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9177F50C1AED6CFBC37BA2 /* Pods_Social_Networking.framework */; };
 		AA1C10C025E99D5E0024E87A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C10BF25E99D5E0024E87A /* AppDelegate.swift */; };
 		AA1C10C925E99D610024E87A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1C10C825E99D610024E87A /* Assets.xcassets */; };
 		AA1C10CC25E99D610024E87A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1C10CA25E99D610024E87A /* LaunchScreen.storyboard */; };
@@ -47,7 +47,7 @@
 		AA1C11B625EC3CA80024E87A /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11B525EC3CA80024E87A /* ProfileInteractor.swift */; };
 		AA1C11BA25EC3D500024E87A /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11B925EC3D500024E87A /* ProfileRouter.swift */; };
 		AA1C11BD25EC3D9C0024E87A /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11BC25EC3D9C0024E87A /* ProfilePresenter.swift */; };
-		AA1C11C025EC3EEE0024E87A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11BF25EC3EEE0024E87A /* ProfileTableViewCell.swift */; };
+		AA1C11C025EC3EEE0024E87A /* ProfileInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11BF25EC3EEE0024E87A /* ProfileInfoCollectionViewCell.swift */; };
 		AA1C11C325ED00F00024E87A /* ProfileFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11C225ED00F00024E87A /* ProfileFriendsCollectionViewCell.swift */; };
 		AA1C11C625ED0CF30024E87A /* ProfilePhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11C525ED0CF30024E87A /* ProfilePhotosCollectionViewCell.swift */; };
 		AA1C11DA25ED46AC0024E87A /* WebPageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11D925ED46AC0024E87A /* WebPageAssembly.swift */; };
@@ -56,22 +56,42 @@
 		AA1C11E525ED48B90024E87A /* WebPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11E425ED48B90024E87A /* WebPageRouter.swift */; };
 		AA1C11E825ED48FA0024E87A /* WebPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C11E725ED48FA0024E87A /* WebPagePresenter.swift */; };
 		AA1C11F125ED8B8D0024E87A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1C11F025ED8B8D0024E87A /* WebKit.framework */; };
+		AA513C4C25FCE69A0030B5C1 /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C4B25FCE69A0030B5C1 /* TestCollectionViewCell.swift */; };
+		AA513C632600D8AF0030B5C1 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C622600D8AF0030B5C1 /* PostCollectionViewCell.swift */; };
+		AA513C6B260119560030B5C1 /* UserPosts1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C6A260119560030B5C1 /* UserPosts1.swift */; };
+		AA513C752603D0600030B5C1 /* FullInfoPageUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C742603D0600030B5C1 /* FullInfoPageUserViewController.swift */; };
+		AA513C792603D0F10030B5C1 /* FullInfoPageUserAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C782603D0F10030B5C1 /* FullInfoPageUserAssembly.swift */; };
+		AA513C7C2603D1A10030B5C1 /* FullInfoPageUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C7B2603D1A10030B5C1 /* FullInfoPageUserInteractor.swift */; };
+		AA513C7F2603D3190030B5C1 /* FullInfoPageUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C7E2603D3190030B5C1 /* FullInfoPageUserPresenter.swift */; };
+		AA513C822603D39D0030B5C1 /* FullInfoPageUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C812603D39D0030B5C1 /* FullInfoPageUserRouter.swift */; };
+		AA513C852603FEAA0030B5C1 /* FullPageInfoTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C842603FEAA0030B5C1 /* FullPageInfoTypeSection.swift */; };
+		AA513C88260402750030B5C1 /* FirstInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C87260402750030B5C1 /* FirstInfoTableViewCell.swift */; };
+		AA513C8C2604034D0030B5C1 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C8B2604034D0030B5C1 /* ButtonTableViewCell.swift */; };
+		AA513C90260404000030B5C1 /* BasecTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C8F260404000030B5C1 /* BasecTableViewCell.swift */; };
+		AA513C93260404100030B5C1 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C92260404100030B5C1 /* ContactsTableViewCell.swift */; };
+		AA513C96260404400030B5C1 /* EducationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C95260404400030B5C1 /* EducationTableViewCell.swift */; };
+		AA513C992604045C0030B5C1 /* PersonalInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA513C982604045C0030B5C1 /* PersonalInformationTableViewCell.swift */; };
+		AA579BCB2613550D00B49D89 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA579BCA2613550D00B49D89 /* NewsTableViewCell.swift */; };
+		AA579BCE26135A5900B49D89 /* SearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA579BCD26135A5900B49D89 /* SearchBarTableViewCell.swift */; };
+		AA5CEE4B25F4F163009812B6 /* ProfileAddPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5CEE4A25F4F163009812B6 /* ProfileAddPostCollectionViewCell.swift */; };
+		AA5CEE6C25F775C5009812B6 /* UserInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5CEE6B25F775C4009812B6 /* UserInfoHeaderView.swift */; };
+		AA86EF7E25FAB95900588C43 /* UserPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA86EF7D25FAB95900588C43 /* UserPosts.swift */; };
 		AA9FD58225EE7825003D606F /* DocJsonNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD58125EE7825003D606F /* DocJsonNews.swift */; };
 		AA9FD58925EEB4D1003D606F /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD58825EEB4D1003D606F /* NewsResponse.swift */; };
 		AA9FD5A825F037C2003D606F /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD5A725F037C2003D606F /* AuthManager.swift */; };
 		AA9FD5B625F044AD003D606F /* PrimaryUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD5B525F044AD003D606F /* PrimaryUserData.swift */; };
-		AA9FD5DB25F11771003D606F /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9FD5DA25F11771003D606F /* libSDWebImage.a */; };
 		AA9FD5FA25F1883C003D606F /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD5F925F1883C003D606F /* FriendsModel.swift */; };
 		AA9FD5FD25F18B59003D606F /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD5FC25F18B59003D606F /* NetworkingService.swift */; };
 		AA9FD60525F1A2AB003D606F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD60425F1A2AB003D606F /* UserProfile.swift */; };
 		AA9FD61325F399EB003D606F /* FriendsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD61225F399EB003D606F /* FriendsType.swift */; };
 		AA9FD61C25F3A075003D606F /* FriendsSortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD61B25F3A075003D606F /* FriendsSortType.swift */; };
+		AA9FD62425F44175003D606F /* UserPageTypeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD62325F44174003D606F /* UserPageTypeSection.swift */; };
+		AA9FD62725F441EC003D606F /* UserCollectedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9FD62625F441EC003D606F /* UserCollectedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		358371BC70CFC61B2ABFF085 /* Pods-Social Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking.release.xcconfig"; path = "Target Support Files/Pods-Social Networking/Pods-Social Networking.release.xcconfig"; sourceTree = "<group>"; };
-		45BA5A50C845530D4F4A32C7 /* Pods-Social Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking.debug.xcconfig"; path = "Target Support Files/Pods-Social Networking/Pods-Social Networking.debug.xcconfig"; sourceTree = "<group>"; };
-		A2CDC979291E169675CA0037 /* libPods-Social Networking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Social Networking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A08352C88B8276F44021837 /* Pods-Social Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking.release.xcconfig"; path = "Target Support Files/Pods-Social Networking/Pods-Social Networking.release.xcconfig"; sourceTree = "<group>"; };
+		31533AD4712525582C53E643 /* Pods-Social Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Networking.debug.xcconfig"; path = "Target Support Files/Pods-Social Networking/Pods-Social Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		AA1C10BC25E99D5E0024E87A /* Social Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Networking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1C10BF25E99D5E0024E87A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1C10C825E99D610024E87A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,7 +133,7 @@
 		AA1C11B525EC3CA80024E87A /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		AA1C11B925EC3D500024E87A /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		AA1C11BC25EC3D9C0024E87A /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		AA1C11BF25EC3EEE0024E87A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		AA1C11BF25EC3EEE0024E87A /* ProfileInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA1C11C225ED00F00024E87A /* ProfileFriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA1C11C525ED0CF30024E87A /* ProfilePhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA1C11D925ED46AC0024E87A /* WebPageAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageAssembly.swift; sourceTree = "<group>"; };
@@ -122,6 +142,26 @@
 		AA1C11E425ED48B90024E87A /* WebPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageRouter.swift; sourceTree = "<group>"; };
 		AA1C11E725ED48FA0024E87A /* WebPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPagePresenter.swift; sourceTree = "<group>"; };
 		AA1C11F025ED8B8D0024E87A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		AA513C4B25FCE69A0030B5C1 /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA513C622600D8AF0030B5C1 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA513C6A260119560030B5C1 /* UserPosts1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPosts1.swift; sourceTree = "<group>"; };
+		AA513C742603D0600030B5C1 /* FullInfoPageUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoPageUserViewController.swift; sourceTree = "<group>"; };
+		AA513C782603D0F10030B5C1 /* FullInfoPageUserAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoPageUserAssembly.swift; sourceTree = "<group>"; };
+		AA513C7B2603D1A10030B5C1 /* FullInfoPageUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoPageUserInteractor.swift; sourceTree = "<group>"; };
+		AA513C7E2603D3190030B5C1 /* FullInfoPageUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoPageUserPresenter.swift; sourceTree = "<group>"; };
+		AA513C812603D39D0030B5C1 /* FullInfoPageUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullInfoPageUserRouter.swift; sourceTree = "<group>"; };
+		AA513C842603FEAA0030B5C1 /* FullPageInfoTypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPageInfoTypeSection.swift; sourceTree = "<group>"; };
+		AA513C87260402750030B5C1 /* FirstInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInfoTableViewCell.swift; sourceTree = "<group>"; };
+		AA513C8B2604034D0030B5C1 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		AA513C8F260404000030B5C1 /* BasecTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasecTableViewCell.swift; sourceTree = "<group>"; };
+		AA513C92260404100030B5C1 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		AA513C95260404400030B5C1 /* EducationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationTableViewCell.swift; sourceTree = "<group>"; };
+		AA513C982604045C0030B5C1 /* PersonalInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationTableViewCell.swift; sourceTree = "<group>"; };
+		AA579BCA2613550D00B49D89 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		AA579BCD26135A5900B49D89 /* SearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewCell.swift; sourceTree = "<group>"; };
+		AA5CEE4A25F4F163009812B6 /* ProfileAddPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAddPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA5CEE6B25F775C4009812B6 /* UserInfoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeaderView.swift; sourceTree = "<group>"; };
+		AA86EF7D25FAB95900588C43 /* UserPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPosts.swift; sourceTree = "<group>"; };
 		AA9FD58125EE7825003D606F /* DocJsonNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocJsonNews.swift; sourceTree = "<group>"; };
 		AA9FD58825EEB4D1003D606F /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 		AA9FD5A725F037C2003D606F /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -132,6 +172,9 @@
 		AA9FD60425F1A2AB003D606F /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		AA9FD61225F399EB003D606F /* FriendsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsType.swift; sourceTree = "<group>"; };
 		AA9FD61B25F3A075003D606F /* FriendsSortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSortType.swift; sourceTree = "<group>"; };
+		AA9FD62325F44174003D606F /* UserPageTypeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageTypeSection.swift; sourceTree = "<group>"; };
+		AA9FD62625F441EC003D606F /* UserCollectedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectedData.swift; sourceTree = "<group>"; };
+		AF9177F50C1AED6CFBC37BA2 /* Pods_Social_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA1C11F125ED8B8D0024E87A /* WebKit.framework in Frameworks */,
-				AA9FD5DB25F11771003D606F /* libSDWebImage.a in Frameworks */,
-				3882F32940AB8F8296D42BCE /* libPods-Social Networking.a in Frameworks */,
+				6C8C8430DF810495BF75D5CD /* Pods_Social_Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +193,8 @@
 		330195635C03EB83C890E37F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				45BA5A50C845530D4F4A32C7 /* Pods-Social Networking.debug.xcconfig */,
-				358371BC70CFC61B2ABFF085 /* Pods-Social Networking.release.xcconfig */,
+				31533AD4712525582C53E643 /* Pods-Social Networking.debug.xcconfig */,
+				1A08352C88B8276F44021837 /* Pods-Social Networking.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -162,7 +204,7 @@
 			children = (
 				AA9FD5DA25F11771003D606F /* libSDWebImage.a */,
 				AA1C11F025ED8B8D0024E87A /* WebKit.framework */,
-				A2CDC979291E169675CA0037 /* libPods-Social Networking.a */,
+				AF9177F50C1AED6CFBC37BA2 /* Pods_Social_Networking.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -290,6 +332,7 @@
 				AA1C112525E9B9FF0024E87A /* News */,
 				AA1C113D25E9BED10024E87A /* Friends */,
 				AA1C114725E9BF760024E87A /* Profile */,
+				AA513C6D2603CFCB0030B5C1 /*  Full InfoPage */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -405,7 +448,9 @@
 			isa = PBXGroup;
 			children = (
 				AA1C113025E9BAA30024E87A /* NewsView.swift */,
+				AA579BCD26135A5900B49D89 /* SearchBarTableViewCell.swift */,
 				AA1C117E25EAEA430024E87A /* NewsStorysTableViewCell.swift */,
+				AA579BCA2613550D00B49D89 /* NewsTableViewCell.swift */,
 				AA1C119025EAFDCC0024E87A /* NewsStorysCollectionViewCell.swift */,
 			);
 			path = View;
@@ -473,10 +518,8 @@
 		AA1C114925E9BF820024E87A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA513C652600F9420030B5C1 /* CollectionCell */,
 				AA1C114E25E9BFC20024E87A /* ProfileView.swift */,
-				AA1C11BF25EC3EEE0024E87A /* ProfileTableViewCell.swift */,
-				AA1C11C225ED00F00024E87A /* ProfileFriendsCollectionViewCell.swift */,
-				AA1C11C525ED0CF30024E87A /* ProfilePhotosCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -543,7 +586,11 @@
 		AA1C11B325EC3BF40024E87A /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				AA9FD62625F441EC003D606F /* UserCollectedData.swift */,
 				AA9FD60425F1A2AB003D606F /* UserProfile.swift */,
+				AA86EF7D25FAB95900588C43 /* UserPosts.swift */,
+				AA9FD62325F44174003D606F /* UserPageTypeSection.swift */,
+				AA513C6A260119560030B5C1 /* UserPosts1.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -617,6 +664,95 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		AA513C652600F9420030B5C1 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				AA1C11BF25EC3EEE0024E87A /* ProfileInfoCollectionViewCell.swift */,
+				AA5CEE6B25F775C4009812B6 /* UserInfoHeaderView.swift */,
+				AA5CEE4A25F4F163009812B6 /* ProfileAddPostCollectionViewCell.swift */,
+				AA1C11C225ED00F00024E87A /* ProfileFriendsCollectionViewCell.swift */,
+				AA1C11C525ED0CF30024E87A /* ProfilePhotosCollectionViewCell.swift */,
+				AA513C4B25FCE69A0030B5C1 /* TestCollectionViewCell.swift */,
+				AA513C622600D8AF0030B5C1 /* PostCollectionViewCell.swift */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		AA513C6D2603CFCB0030B5C1 /*  Full InfoPage */ = {
+			isa = PBXGroup;
+			children = (
+				AA513C732603D02E0030B5C1 /* Assembly */,
+				AA513C722603D0280030B5C1 /* View */,
+				AA513C712603D01C0030B5C1 /* Interactor */,
+				AA513C702603D00F0030B5C1 /* Presenter */,
+				AA513C6F2603D0050030B5C1 /* Entity */,
+				AA513C6E2603CFFD0030B5C1 /* Router */,
+			);
+			path = " Full InfoPage";
+			sourceTree = "<group>";
+		};
+		AA513C6E2603CFFD0030B5C1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				AA513C812603D39D0030B5C1 /* FullInfoPageUserRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		AA513C6F2603D0050030B5C1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AA513C842603FEAA0030B5C1 /* FullPageInfoTypeSection.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AA513C702603D00F0030B5C1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AA513C7E2603D3190030B5C1 /* FullInfoPageUserPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AA513C712603D01C0030B5C1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AA513C7B2603D1A10030B5C1 /* FullInfoPageUserInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AA513C722603D0280030B5C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA513C8A2604032C0030B5C1 /* UITableViewCell */,
+				AA513C742603D0600030B5C1 /* FullInfoPageUserViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA513C732603D02E0030B5C1 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				AA513C782603D0F10030B5C1 /* FullInfoPageUserAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		AA513C8A2604032C0030B5C1 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AA513C87260402750030B5C1 /* FirstInfoTableViewCell.swift */,
+				AA513C8B2604034D0030B5C1 /* ButtonTableViewCell.swift */,
+				AA513C8F260404000030B5C1 /* BasecTableViewCell.swift */,
+				AA513C92260404100030B5C1 /* ContactsTableViewCell.swift */,
+				AA513C95260404400030B5C1 /* EducationTableViewCell.swift */,
+				AA513C982604045C0030B5C1 /* PersonalInformationTableViewCell.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -624,10 +760,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA1C10D025E99D610024E87A /* Build configuration list for PBXNativeTarget "Social Networking" */;
 			buildPhases = (
-				05E8E2FAD12F16DBDE742BA9 /* [CP] Check Pods Manifest.lock */,
+				29DCEBA50A3FA0CB7E65D723 /* [CP] Check Pods Manifest.lock */,
 				AA1C10B825E99D5E0024E87A /* Sources */,
 				AA1C10B925E99D5E0024E87A /* Frameworks */,
 				AA1C10BA25E99D5E0024E87A /* Resources */,
+				5A2C483B9AD70B8124E38D0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -683,7 +820,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05E8E2FAD12F16DBDE742BA9 /* [CP] Check Pods Manifest.lock */ = {
+		29DCEBA50A3FA0CB7E65D723 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -705,6 +842,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5A2C483B9AD70B8124E38D0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Social Networking/Pods-Social Networking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Social Networking/Pods-Social Networking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Social Networking/Pods-Social Networking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -712,21 +866,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA513C992604045C0030B5C1 /* PersonalInformationTableViewCell.swift in Sources */,
 				AA1C111C25E9B8730024E87A /* TabBarInteractor.swift in Sources */,
 				AA9FD5FD25F18B59003D606F /* NetworkingService.swift in Sources */,
 				AA1C10F425E9A0960024E87A /* LoginScreenRouter.swift in Sources */,
+				AA513C7F2603D3190030B5C1 /* FullInfoPageUserPresenter.swift in Sources */,
 				AA1C110425E9A3A10024E87A /* UIActivityIndicatorView+Extension.swift in Sources */,
 				AA1C11AF25EBFDAB0024E87A /* FriendsTableViewCell.swift in Sources */,
 				AA1C114125E9BF000024E87A /* FriendsAssembly.swift in Sources */,
 				AA1C113125E9BAA30024E87A /* NewsView.swift in Sources */,
 				AA9FD61C25F3A075003D606F /* FriendsSortType.swift in Sources */,
 				AA1C118925EAFBEE0024E87A /* UICollectionView+Extension.swift in Sources */,
+				AA513C90260404000030B5C1 /* BasecTableViewCell.swift in Sources */,
 				AA1C111925E9B7740024E87A /* TabBarView.swift in Sources */,
 				AA1C11E525ED48B90024E87A /* WebPageRouter.swift in Sources */,
 				AA9FD5FA25F1883C003D606F /* FriendsModel.swift in Sources */,
 				AA1C10C025E99D5E0024E87A /* AppDelegate.swift in Sources */,
 				AA9FD60525F1A2AB003D606F /* UserProfile.swift in Sources */,
-				AA1C11C025EC3EEE0024E87A /* ProfileTableViewCell.swift in Sources */,
+				AA1C11C025EC3EEE0024E87A /* ProfileInfoCollectionViewCell.swift in Sources */,
+				AA513C822603D39D0030B5C1 /* FullInfoPageUserRouter.swift in Sources */,
 				AA1C118D25EAFC1E0024E87A /* UICollectionViewCell+Extension.swift in Sources */,
 				AA1C114F25E9BFC20024E87A /* ProfileView.swift in Sources */,
 				AA9FD58225EE7825003D606F /* DocJsonNews.swift in Sources */,
@@ -737,31 +895,49 @@
 				AA1C114525E9BF3E0024E87A /* FriendsView.swift in Sources */,
 				AA1C113A25E9BB000024E87A /* NewsRouter.swift in Sources */,
 				AA1C113725E9BAE70024E87A /* NewsPresenter.swift in Sources */,
+				AA513C752603D0600030B5C1 /* FullInfoPageUserViewController.swift in Sources */,
+				AA513C4C25FCE69A0030B5C1 /* TestCollectionViewCell.swift in Sources */,
 				AA1C10F125E9A0890024E87A /* LoginScreenPresenter.swift in Sources */,
+				AA9FD62725F441EC003D606F /* UserCollectedData.swift in Sources */,
 				AA1C11A925EBF1430024E87A /* FriendsRouter.swift in Sources */,
 				AA1C110125E9A1790024E87A /* UITableViewCell+Extension.swift in Sources */,
 				AA9FD58925EEB4D1003D606F /* NewsResponse.swift in Sources */,
 				AA9FD5B625F044AD003D606F /* PrimaryUserData.swift in Sources */,
+				AA513C6B260119560030B5C1 /* UserPosts1.swift in Sources */,
 				AA1C110925E9B4540024E87A /* ButtonView.swift in Sources */,
 				AA1C11BA25EC3D500024E87A /* ProfileRouter.swift in Sources */,
 				AA1C111525E9B7540024E87A /* TabBarAssembly.swift in Sources */,
+				AA513C88260402750030B5C1 /* FirstInfoTableViewCell.swift in Sources */,
+				AA86EF7E25FAB95900588C43 /* UserPosts.swift in Sources */,
 				AA1C11C625ED0CF30024E87A /* ProfilePhotosCollectionViewCell.swift in Sources */,
 				AA9FD61325F399EB003D606F /* FriendsType.swift in Sources */,
 				AA1C112325E9B90E0024E87A /* TabBarRouter.swift in Sources */,
 				AA1C112D25E9BA400024E87A /* NewsAssembly.swift in Sources */,
+				AA579BCB2613550D00B49D89 /* NewsTableViewCell.swift in Sources */,
 				AA1C114B25E9BF940024E87A /* ProfileAssembly.swift in Sources */,
 				AA1C111F25E9B8B00024E87A /* TabBarPresenter.swift in Sources */,
+				AA513C8C2604034D0030B5C1 /* ButtonTableViewCell.swift in Sources */,
 				AA1C11A525EBF0DB0024E87A /* FriendsInteractor.swift in Sources */,
 				AA1C10EE25E9A0740024E87A /* LoginScreenInteractor.swift in Sources */,
 				AA1C11DA25ED46AC0024E87A /* WebPageAssembly.swift in Sources */,
 				AA1C10F725E9A0B70024E87A /* BaseViewController.swift in Sources */,
+				AA5CEE4B25F4F163009812B6 /* ProfileAddPostCollectionViewCell.swift in Sources */,
 				AA1C11BD25EC3D9C0024E87A /* ProfilePresenter.swift in Sources */,
 				AA1C11AC25EBF2180024E87A /* FriendsPresenter.swift in Sources */,
+				AA513C93260404100030B5C1 /* ContactsTableViewCell.swift in Sources */,
+				AA513C96260404400030B5C1 /* EducationTableViewCell.swift in Sources */,
 				AA1C10EB25E9A0650024E87A /* LoginScreenView.swift in Sources */,
+				AA579BCE26135A5900B49D89 /* SearchBarTableViewCell.swift in Sources */,
+				AA513C792603D0F10030B5C1 /* FullInfoPageUserAssembly.swift in Sources */,
 				AA1C11DD25ED471D0024E87A /* WebPageView.swift in Sources */,
+				AA9FD62425F44175003D606F /* UserPageTypeSection.swift in Sources */,
 				AA1C113425E9BAB30024E87A /* NewsInteractor.swift in Sources */,
 				AA1C11C325ED00F00024E87A /* ProfileFriendsCollectionViewCell.swift in Sources */,
+				AA5CEE6C25F775C5009812B6 /* UserInfoHeaderView.swift in Sources */,
+				AA513C632600D8AF0030B5C1 /* PostCollectionViewCell.swift in Sources */,
+				AA513C7C2603D1A10030B5C1 /* FullInfoPageUserInteractor.swift in Sources */,
 				AA1C10FD25E9A16E0024E87A /* UITableView+Extension.swift in Sources */,
+				AA513C852603FEAA0030B5C1 /* FullPageInfoTypeSection.swift in Sources */,
 				AA1C11B625EC3CA80024E87A /* ProfileInteractor.swift in Sources */,
 				AA1C11E825ED48FA0024E87A /* WebPagePresenter.swift in Sources */,
 				AA1C119125EAFDCC0024E87A /* NewsStorysCollectionViewCell.swift in Sources */,
@@ -834,7 +1010,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -889,7 +1065,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -901,7 +1077,7 @@
 		};
 		AA1C10D125E99D610024E87A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45BA5A50C845530D4F4A32C7 /* Pods-Social Networking.debug.xcconfig */;
+			baseConfigurationReference = 31533AD4712525582C53E643 /* Pods-Social Networking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -921,7 +1097,7 @@
 		};
 		AA1C10D225E99D610024E87A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 358371BC70CFC61B2ABFF085 /* Pods-Social Networking.release.xcconfig */;
+			baseConfigurationReference = 1A08352C88B8276F44021837 /* Pods-Social Networking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

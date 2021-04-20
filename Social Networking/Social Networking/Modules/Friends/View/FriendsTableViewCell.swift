@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FriendsTableViewCell: UITableViewCell {
     
@@ -105,16 +106,17 @@ class FriendsTableViewCell: UITableViewCell {
         if data.online == 1 {
             onlineImage.image = #imageLiteral(resourceName: "iconfinder_clone-old_15483")
         }
-        
-        NetworkingService.shared.uploadingImageByUrl(data.photo200_Orig) { [weak self] (result) in
-            guard let self = self else { return }
-            switch result {
-            case .success(let image):
-                self.avatarImage.image = image
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        guard let url = URL(string: data.photo200_Orig) else { return }
+        avatarImage.kf.setImage(with: url)
+//        NetworkingService.shared.uploadingImageByUrl(data.photo200_Orig) { [weak self] (result) in
+//            guard let self = self else { return }
+//            switch result {
+//            case .success(let image):
+//                self.avatarImage.image = image
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
     }
     
     func configureSearchBar() {

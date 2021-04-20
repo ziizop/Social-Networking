@@ -9,5 +9,5 @@ import Foundation
 
 struct PrimaryUserData {
     var token: String
-    var userId: String
+    var userId: Int
 }

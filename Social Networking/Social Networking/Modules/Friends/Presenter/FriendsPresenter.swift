@@ -26,14 +26,14 @@ extension FriendsPresenter: FriendsViewOutput {
     }
     
     func viewWillAppear() {
-        
-    }
-    
-    func viewDidAppear() {
         /*
          Собираем данные
          */
         interactor?.factoryFriends()
+    }
+    
+    func viewDidAppear() {
+
     }
     
     func numberOfSections() -> Int {
